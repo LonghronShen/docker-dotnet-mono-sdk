@@ -8,3 +8,6 @@ RUN apt-get update
 RUN apt-get install -y apt-utils mono-complete curl
 
 RUN mozroots --import --sync
+RUN certmgr -ssl -m https://go.microsoft.com
+RUN certmgr -ssl -m https://nugetgallery.blob.core.windows.net
+RUN certmgr -ssl -m https://nuget.org
